@@ -58,18 +58,20 @@ The repository is structured as follows:
 
 ```
 /
-|-- diagrams/       # Entity-relationship diagrams
+|-- diagrams/			
+|   |-- 01.pdf		# Entity-relationship diagram
+|   |-- 01_ex.pdf	# Entity-relationship explanation
 |-- scripts/
-|   |-- 02.sql      # Creacion de la base de datos
-|   |-- 03.sql    	# Crear la tabla ivr_detail
-|   |-- 04.sql      # Generar el campo vdn_aggregation
-|   |-- 05.sql      # Generar los campos document_type y document_identification
-|   |-- 06.sql      # Generar el campo customer_phone
-|   |-- 07.sql      # Generar el campo billing_account_id
-|   |-- 08.sql      # Generar el campo masiva_lg
-|   |-- 09.sql     	# Generar el campo info_by_phone_lg
-|   |-- 10.sql 		# Generar el campo info_by_dni_lg
-|   |-- 11.sql 		# Generar los campos repeated_phone_24H, cause_recall_phone_24H
+|   |-- 02.sql		# Creacion de la base de datos
+|   |-- 03.sql		# Crear la tabla ivr_detail
+|   |-- 04.sql		# Generar el campo vdn_aggregation
+|   |-- 05.sql		# Generar los campos document_type y document_identification
+|   |-- 06.sql		# Generar el campo customer_phone
+|   |-- 07.sql		# Generar el campo billing_account_id
+|   |-- 08.sql		# Generar el campo masiva_lg
+|   |-- 09.sql		# Generar el campo info_by_phone_lg
+|   |-- 10.sql		# Generar el campo info_by_dni_lg
+|   |-- 11.sql		# Generar los campos repeated_phone_24H, cause_recall_phone_24H
 |-- README.md
 ```
 
