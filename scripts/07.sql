@@ -1,7 +1,13 @@
-select 
-cal.ivr_id,
-coalesce(array_agg(case when det.billing_account_id <> 'UNKNOWN' then det.billing_account_id end)[OFFSET (0)], 'UNKNOWN') as billing_account_id
-from keepcoding.ivr_calls cal
-left join keepcoding.ivr_detail det
-on cal.ivr_id = det.calls_ivr_id
-group by cal.ivr_id;
+SELECT 
+  cal.ivr_id,
+  COALESCE(
+    ARRAY_AGG(
+      NULLIF(det.billing_account_id, 'UNKNOWN')
+      ORDER BY det.step_sequence DESC
+    )[OFFSET(0)], 
+    'UNKNOWN'
+  ) AS billing_account_id
+FROM keepcoding.ivr_calls cal
+LEFT JOIN keepcoding.ivr_detail det
+ON cal.ivr_id = det.calls_ivr_id
+GROUP BY cal.ivr_id;
